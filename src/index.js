@@ -4,6 +4,8 @@ const _ = require('lodash')
 let EmployeeTypes = require('./employeeTypes.js')
 let team = []
 
+
+
 async function main() {
 
   async function createEmployee(type) {
@@ -40,6 +42,10 @@ async function main() {
     else {
       renderTeam()
     }
+  }
+
+  function renderTeam() {
+    console.log(team.map(employee => employee.render()).join(''))
   }
 
   // We have to have a manager so we add that first
