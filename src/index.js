@@ -4,10 +4,7 @@ const _ = require('lodash')
 let EmployeeTypes = require('./employeeTypes.js')
 let team = []
 
-
-
 async function main() {
-
   async function createEmployee(type) {
     try {
       const role = type || await inquirer.prompt({
@@ -35,7 +32,6 @@ async function main() {
       message: 'Enter new employee? (y/n)',
     })
     if(enterNew.res.toLowerCase() == 'y') {
-
       await createEmployee()
       loop()
     }
@@ -52,7 +48,5 @@ async function main() {
   await createEmployee({ 'type': 'Manager' })
   loop()
 }
-
-
 
 main()

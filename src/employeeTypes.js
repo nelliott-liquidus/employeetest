@@ -4,10 +4,9 @@ const inquirer = require('inquirer')
 let id = 0 // auto increment
 
 class Employee {
-
   constructor(options) {
     this.defaults = {
-      id: id,
+      id,
       name: '',
       role: 'Employee',
       propsToEnter: ['name']
@@ -56,7 +55,6 @@ class Employee {
       </div>
     `
   }
-
 }
 
 class Manager extends Employee {
