@@ -1,0 +1,7 @@
+{
+  "verbose": false,
+  "ignore": ["*.test.js", "fixtures/*, /public/dynamicbuild/*"],
+  "watch": [
+    "src"
+  ]
+}
